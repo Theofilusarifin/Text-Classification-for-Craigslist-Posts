@@ -1,7 +1,7 @@
 import streamlit as st
 import time
 
-from codes.text_preprocessing import text_preprocessing
+from codes.text_preprocessing import text_preproccessing
 from codes.section_preprocessing import section_preprocessing
 
 st.title("Text Classification for Craigslist Posts")
@@ -17,10 +17,9 @@ input_heading = st.text_area("Please Enter Your Heading:")
 
 if st.button("Predict Category"):
     if selected_city and selected_section and input_heading:  # Check if all inputs are filled
-        st.write("Predicting category...")  # Show loading message
         with st.spinner('Predicting category...'):  # Show loading spinner
-            time.sleep(2)  # Simulate loading for 2 seconds
-            preprocessed_heading = text_preprocessing(input_heading)
+            time.sleep(1)  # Simulate loading for 2 seconds
+            preprocessed_heading = text_preproccessing(input_heading)
             predicted_category = section_preprocessing(selected_section, preprocessed_heading)
 
         result = f'Predicted Category : {predicted_category}'
