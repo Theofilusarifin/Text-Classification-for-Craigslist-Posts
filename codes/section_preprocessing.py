@@ -11,7 +11,7 @@ def section_preprocessing(section, heading):
         rf_model = joblib.load('./model/text/forsale/models/rf.joblib')
         xgb_model = joblib.load('./model/text/forsale/models/xgb.joblib')
         
-        f1_scores = [0.882735097948905, 0.9050124810866473, 0.9113109623277331]
+        f1_scores = [0.88, 0.91, 0.91]
         config = ['appliances', 'cell-phones', 'photography', 'video-games']
 
     elif section == 'community':
