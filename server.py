@@ -1,7 +1,9 @@
 import streamlit as st 
 from codes.text_preprocessing import text_preproccessing
 from codes.section_preprocessing import section_preprocessing
+import subprocess
 
+subprocess.run(["pip", "install", "--upgrade", "pip"])
 
 st.title("Text Classification for Craigslist Posts") 
 
