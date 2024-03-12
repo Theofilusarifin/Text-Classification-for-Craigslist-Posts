@@ -1,8 +1,5 @@
 import joblib
 import numpy as np
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.ensemble import GradientBoostingClassifier
-from xgboost import XGBClassifier
 
 # Load models
 tfidf_vectorizer_forsale = joblib.load('./model/text/forsale/tfidf.joblib')
